@@ -1,5 +1,4 @@
 #include <iostream>
-#include "sort_util.h"
 using std::cout;
 using std::endl;
 
