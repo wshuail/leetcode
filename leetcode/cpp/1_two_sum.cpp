@@ -9,25 +9,27 @@ using namespace std;
 class Solution{
     public:
     vector<int> two_sum(vector<int> & nums, int target){
-    unordered_map<int, int> m;
-    for (int i=0; nums.size(); ++i){
-        if (m.count(target-nums[i])){
-                return {i, m[target-nums[i]]};
-                }
+        vector<int> result;
+        unordered_map<int, int> m;
+        for (int i=0; i< nums.size(); ++i){
+            if (m.count(target-nums[i])){
+                result.push_back(i);
+                result.push_back(m[target-nums[i]]);
+                return result;
+            }
         m[nums[i]] = i;
         }
-    return {};
+    return result;
     }
 };
 
 
 int main(){
-    Solution *Two_Sum = new Solution();
+    Solution sol;
     vector<int> nums={2, 7, 11, 15};
     int target = 9;
-	vector<int> result = Two_Sum->two_sum(nums, target);
+	vector<int> result = sol.two_sum(nums, target);
     for (int i=0; i<result.size(); ++i){
         cout << i << "th value is " << result[i] << endl;
     }
-    // delete Two_Sum;
 }

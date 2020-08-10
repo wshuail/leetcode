@@ -15,4 +15,7 @@ class Solution:
             ans = ans ^ nums[i]
         return ans
 
-
+if __name__ == '__main__':
+    nums = [1, 2, 1, 2, 3]
+    sol = Solution()
+    ans = sol.singleNumber(nums)
