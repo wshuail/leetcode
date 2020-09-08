@@ -25,6 +25,16 @@ bool check_ascending(int *a, int length){
     return true;
 }
 
+bool check_descending(int *a, int length){
+    for (int i=0; i<length; ++i){
+        if (a[i] < a[i+1]){
+            return false;
+        };
+    }
+    return true;
+}
+
+
 /*
 int main(){
     int n = 10;

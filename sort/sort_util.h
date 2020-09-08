@@ -4,5 +4,6 @@
 void random_array(int[], int, int, int);
 void print_array(int[], int);
 bool check_ascending(int[], int);
+bool check_descending(int[], int);
 
 #endif

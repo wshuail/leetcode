@@ -1,4 +1,5 @@
 #include <iostream>
+#include "sort_util.h"
 using std::cout;
 using std::endl;
 
@@ -42,6 +43,19 @@ void insert_sort(int a[], int length){
     }
 }
 
+
+void shell_sort(int a[], int length){
+    int i, j, gap;
+    for (gap=length/2; gap>0; gap/=2){
+        for (i=gap; i<length; ++i){
+            for (j=i-gap; j>=0 && a[j]>a[j+gap]; j-=gap){
+                swap(a[j], a[j+gap]);
+            }
+        }
+    }
+}
+
+
 void quick_sort(int a[], int left, int right){
     if (left < right){
         int anchor = a[right];
@@ -60,12 +74,31 @@ void quick_sort(int a[], int left, int right){
 }
 
 
+void max_heap(int a[], int length, int i){
+    int left = 2*i+1;
+    int right = 2*i+2;
+    int largest = i;
+    if (left < length && a[largest] < a[left]){
+        largest = left;
+    }
+    if (right < length && a[largest] < a[right]){
+        largest = right;
+    }
+    if (largest != i){
+        swap(a[largest], a[i]);
+        max_heap(a, length, largest);
+    }
+    
+}
 
-
-
-
-
-
-
+void heap_sort(int a[], int length){
+    for (int i=length/2-1; i>=0; --i){
+        max_heap(a, length, i);
+    }
+    for (int i=length-1; i>0; --i){
+        swap(a[i], a[0]);
+        max_heap(a, i, 0);
+    }
+}
 
 
