@@ -11,25 +11,23 @@ class Solution{
         vector<vector<int>> results;
         sort(nums.begin(), nums.end());
         for (int i=0; i<nums.size()-2; ++i){
-            cout << i << endl;
-            while (i > 0 && nums[i] == nums[i-1]){
-                i += 1;
+            if (i > 0 && nums[i] == nums[i-1]){
+                continue;
             }
             vector<int> result;
             int left = i+1;
             int right = nums.size()-1;
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                cout << i << " " << " " << nums[i] << " " << nums[left] << " " << nums[right] << endl;
                 if (sum == 0){
                     result = {nums[i], nums[left], nums[right]};
                     results.push_back(result);
                     left += 1;
                     right -= 1;
-                    while (nums[left] == nums[left-1]){
+                    while (left < right && nums[left] == nums[left-1]){
                         left += 1;
                     }
-                    while (nums[right] == nums[right+1]){
+                    while (left < right && nums[right] == nums[right+1]){
                         right -= 1;
                     }
                 } else if (sum>0){
@@ -52,7 +50,8 @@ int main(){
     for (int i=0; i<results.size(); ++i){
         vector<int> result = results[i];
         for (int j=0; j<result.size(); ++j){
-            cout << j << "th value is " << result[j] << endl;
+            cout << " " << result[j];
         }
+        cout << endl;
     }
 }
