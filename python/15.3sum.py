@@ -1,5 +1,56 @@
-class Solution(object):
-    def threeSum(self, nums):
+#
+# @lc app=leetcode.cn id=15 lang=python3
+#
+# [15] 三数之和
+#
+# https://leetcode-cn.com/problems/3sum/description/
+#
+# algorithms
+# Medium (30.06%)
+# Total Accepted:    400.6K
+# Total Submissions: 1.3M
+# Testcase Example:  '[-1,0,1,2,-1,-4]'
+#
+# 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0
+# 且不重复的三元组。
+# 
+# 注意：答案中不可以包含重复的三元组。
+# 
+# 
+# 
+# 示例 1：
+# 
+# 
+# 输入：nums = [-1,0,1,2,-1,-4]
+# 输出：[[-1,-1,2],[-1,0,1]]
+# 
+# 
+# 示例 2：
+# 
+# 
+# 输入：nums = []
+# 输出：[]
+# 
+# 
+# 示例 3：
+# 
+# 
+# 输入：nums = [0]
+# 输出：[]
+# 
+# 
+# 
+# 
+# 提示：
+# 
+# 
+# 0 
+# -10^5 
+# 
+# 
+#
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         res = []
         for i in range(len(nums)-2):
@@ -26,10 +77,3 @@ class Solution(object):
         return res
 
 
-
-if __name__ == '__main__':
-    sol = Solution()
-    nums_list = [[0, 0, 0, 0], [-1,0,1,2,-1,-4], [-2,0,0,2,2], [-2,0,3,-1,4,0,3,4,1,1,1,-3,-5,4,0]]
-    for nums in nums_list:
-        results = sol.threeSum(nums)
-        print (results)
