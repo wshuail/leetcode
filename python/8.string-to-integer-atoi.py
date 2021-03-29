@@ -74,38 +74,35 @@
 #
 class Solution:
     def myAtoi(self, s: str) -> int:
-        s = s.strip()
-        valid_nums = '1234567890'
-        start = -1
-        if len(s)==0:
+        INT_MAX = 2147483647; INT_MIN = -2147483648
+        sum = 0
+        sign = 1
+        i = 0
+        if s == '':
             return 0
-        for i in range(len(s)):
-            if start < 0 and s[i] != ' ' and s[i] not in '-' and s[i] not in valid_nums:
-                return 0
-            if start < 0 and s[i] in valid_nums:
-                start = i 
-            if i<len(s)-1 and start >= 0 and s[i] not in valid_nums:
-                end = i
-                break
-            if start >= 0 and i==len(s)-1:
-                end = i+1
-                break
-            if start < 0 and i==len(s)-1:
-                return 0
-        # print (start, end)
-        result = s[start: end] 
-        result = int(result)
-        result = min(2**31, result)
-        
-        if start-1 >= 0 and s[start-1] == '-':
-            result = -result
-        else:
-            result = result
-        
-        return result
-
-sol = Solution()
-x = sol.myAtoi('+-14')
-# print (x)
+        while i < len(s) and s[i].isspace():
+            i += 1
+        if i < len(s) and s[i] == '-':
+            sign = -1
+        if i < len(s) and (s[i] == '-' or s[i] == '+'):
+            i += 1
+        while i < len(s) and s[i].isdigit():
+            digit = int(s[i])
+            if INT_MAX/10 >= sum:
+                sum *= 10
+            else:
+                if sign == 1:
+                    return INT_MAX
+                else:
+                    return INT_MIN
+            if INT_MAX - digit >= sum:
+                sum += digit
+            else:
+                if sign == 1:
+                    return INT_MAX
+                else:
+                    return INT_MIN
+            i += 1
+        return sign*sum
 
 
