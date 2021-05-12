@@ -57,19 +57,31 @@
 # 
 # 
 #
+from typing import List
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-        if len(nums):
-            return
-        n = len(nums)
-        left, right = n-2, n-1
-        while left >= 0 and nums[left] >= nums[right]:
-            left -= 1
-            right -= 1
-        if left == 0:
-            nums.reverse()
-        else:
+        if len(nums)<2:
+            return nums
+        i = len(nums)-2
+        while i >= 0 and nums[i] >= nums[i+1]:
+            i -= 1
+        if i >= 0:
+            j = len(nums)-1
+            while j>i and nums[j] <= nums[i]:
+                j -= 1
+            nums[i], nums[j] = nums[j], nums[i]
+        nums[i+1: ] = nums[i+1: ][::-1]
+        return nums
+
+"""
+# nums = [1, 5, 8, 4, 7, 6, 5, 3, 1]
+nums = [3, 2, 1]
+sol = Solution()
+res = sol.nextPermutation(nums)
+print (res)
+"""
+
 
