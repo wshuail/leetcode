@@ -29,3 +29,23 @@
 #
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
+        size = len(nums)
+        if size == 0:
+            return []
+        path, res = [], []
+        used = [False for _ in range(size)]
+        self.dfs(nums=nums, depth=0, size=size, path=path, res=res, used=used)
+        return res
+
+    def dfs(self, nums, depth, size, path, res, used):
+        if len(path) == size:
+            res.append(path[:])
+        
+        for index in range(size):
+            if not used[index]:
+                used[index] = True
+                path.append(nums[index])
+                self.dfs(nums=nums, depth=depth+1, size=size, path=path, res=res, used=used)
+                used[index] = False
+                path.pop()
+
