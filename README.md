@@ -22,3 +22,8 @@ LeetCode exercises by Python
 | 56 | merge intervals | [python](https://github.com/wshuail/leetcode/blob/master/python/56.merge-intervals.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/56.merge-intervals.cpp)| |
 
 ### 2D Array
+| Index | Title | Solution | Idea |
+| --- | --- | --- | --- |
+| 48 | rotate image | [python](https://github.com/wshuail/leetcode/blob/master/python/48.rotate-image.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/48.rotate-image.cpp)| flip diagonally then horizontally |
+| 73 | set matrix zeroes | [python](https://github.com/wshuail/leetcode/blob/master/python/73.set-matrix-zeroes.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/73.set-matrix-zeroes.cpp)| remember position smart |
+| 498 | diagonal traverse | [python](https://github.com/wshuail/leetcode/blob/master/python/498.diagonal-traverse.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/498.diagonal-traverse.cpp)| |
