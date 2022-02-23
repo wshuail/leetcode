@@ -44,6 +44,8 @@
 #
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        """
+        # method 1
         str_len = list(map(len, strs))
         if all(str_len) == 0 or str_len == []:
             return ''
@@ -56,7 +58,9 @@ class Solution:
                 if all([target_str == s[0: i] for s in strs]):
                     return target_str
         """
-        
+
+        """
+        # method 2
         str_len = list(map(len, strs))
         if all(str_len) == 0 or str_len == []:
             return ''
@@ -75,6 +79,20 @@ class Solution:
 
                 target_len -= 1
         """
+        if len(strs) == 0:
+            return ''
+        if len(strs) == 1:
+            return strs[0]
+
+        min_len = 201
+        for s in strs:
+            if len(s) < min_len:
+                min_len = len(s)
+
+        for i in reversed(range(min_len+1)):
+            if len(set([s[0: i] for s in strs])) == 1:
+                return strs[0][0: i]
+        return ''
 
 
 

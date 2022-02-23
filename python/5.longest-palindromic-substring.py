@@ -29,6 +29,8 @@
 #
 class Solution:
     def longestPalindrome(self, s: str) -> str:
+        """
+        # method 1
         if len(s) == 1:
             return s
         anchor = 0
@@ -39,20 +41,60 @@ class Solution:
             while right < len(s) and s[anchor] == s[right]:
                 tmp = s[anchor: right+1]
                 right += 1
-                # print ('tmp1: {}'.format(tmp))
             while left >= 0 and right < len(s) and s[left] == s[right]:
-                # print (left, right)
                 tmp = s[left: right+1]
                 left -= 1
                 right += 1
-                # print ('tmp2: {}'.format(tmp))
             anchor += 1
             if len(tmp) > len(result):
                 result = tmp
         if len(result) == 0:
             result = s[0]
         return result
+        """
 
-sol = Solution()
-x = sol.longestPalindrome('ab')
-# print (x)
+        """
+        # method 2
+        if len(s) < 2 or s == s[::-1]:
+            return s
+        start = 0
+        max_len = 1
+        for i in range(1, len(s)):
+            odd = s[i-max_len-1: i+1]  # len(odd) = max_len+2
+            even = s[i-max_len: i+1]  # len(even) = max_len+1
+            if i-max_len-1 >= 0 and odd == odd[::-1]:
+                start = i-max_len-1
+                max_len += 2
+                continue
+            if i-max_len >= 0 and even == even[::-1]:
+                start = i-max_len
+                max_len += 1
+        return s[start: start+max_len]
+        """
+
+        # method 3
+        if len(s) < 2 or s == s[::-1]:
+            return s
+
+        res = ''
+        for i in range(len(s)):
+            # odd
+            tmp = self._helper(s, i, i)
+            if len(tmp) > len(res):
+                res = tmp
+            
+            tmp = self._helper(s, i, i+1)
+            if len(tmp) > len(res):
+                res = tmp
+        return res
+
+    def _helper(self, s, left, right):
+        while left>=0 and right<len(s) and s[left]==s[right]:
+            left -= 1
+            right += 1
+        return s[left+1: right]
+
+
+
+
+

@@ -27,3 +27,9 @@ LeetCode exercises by Python
 | 48 | rotate image | [python](https://github.com/wshuail/leetcode/blob/master/python/48.rotate-image.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/48.rotate-image.cpp)| flip diagonally then horizontally |
 | 73 | set matrix zeroes | [python](https://github.com/wshuail/leetcode/blob/master/python/73.set-matrix-zeroes.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/73.set-matrix-zeroes.cpp)| remember position smart |
 | 498 | diagonal traverse | [python](https://github.com/wshuail/leetcode/blob/master/python/498.diagonal-traverse.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/498.diagonal-traverse.cpp)| |
+
+## String
+| Index | Title | Solution | Idea |
+| --- | --- | --- | --- |
+| 5 | longest palindromic substring | [python](https://github.com/wshuail/leetcode/blob/master/python/5.longest-palindromic-substring.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/5.longest-palindromic-substring.cpp)| |
+| 14 | longest common prefix | [python](https://github.com/wshuail/leetcode/blob/master/python/14.longest-common-prefix.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/14.longest-common-prefix.cpp)| |
