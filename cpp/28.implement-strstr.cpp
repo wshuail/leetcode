@@ -60,6 +60,7 @@
  */
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -67,11 +68,12 @@ class Solution {
 public:
     int strStr(string haystack, string needle) {
         int m = haystack.length(), n = needle.length();
-
         if (haystack.substr(0, n) == needle){
             return 0;
         }
 
+        /*
+        // method 1
         for (int i=0; i < m-n+1; ++i){
             // std::cout << "i: " << i << " substr: " << haystack.substr(i, n) << "\n";
             if (haystack.substr(i, n) == needle){
@@ -79,13 +81,44 @@ public:
             }
         }
         return -1;
+        */
+
+        // KMP
+        haystack.insert(haystack.begin(), ' ');
+        needle.insert(needle.begin(), ' ');
+        vector<int> next(n+1);
+        int j = 0;
+        for (int i=2; i<=n; ++i){
+            while (j>0 && needle[i] != needle[j+1]){
+                j = next[j];
+            }
+            if (needle[i] == needle[j+1]){
+                j++;
+            }
+            next[i] = j;
+        }
+
+        for (int i=1, j=0; i<=m; ++i){
+            while (j>0 && haystack[i] != needle[j+1]){
+                j = next[j];
+            }
+            if (haystack[i] == needle[j+1]){
+                j++;
+            }
+            if (j==n){
+                return i-n;
+            }
+        }
+
+        return -1;
+
     }
 };
 
 /*
 int main(){
     Solution sol;
-    string haystack = "hello", needle="ll";
+    string haystack = "aaabbab", needle="ab";
     int res = sol.strStr(haystack, needle);
     std::cout << "res: " << res << "\n";
 }
