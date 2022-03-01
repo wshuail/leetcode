@@ -37,15 +37,11 @@
 #
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        if len(haystack) == 0 and len(needle) == 0:
+        if haystack[0: len(needle)] == needle:
             return 0
-        elif len(haystack) == 0 and len(needle) != 0:
-            return -1
-        elif len(needle) == 0:
-            return 0
+        
         haystack_len = len(haystack)
         needle_len = len(needle)
-
         for i in range(haystack_len-needle_len+1):
             if haystack[i: i+needle_len] == needle:
                 return i
