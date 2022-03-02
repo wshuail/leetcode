@@ -88,6 +88,7 @@ public:
         needle.insert(needle.begin(), ' ');
         vector<int> next(n+1);
         int j = 0;
+        
         for (int i=2; i<=n; ++i){
             while (j>0 && needle[i] != needle[j+1]){
                 j = next[j];
@@ -97,6 +98,13 @@ public:
             }
             next[i] = j;
         }
+        /*
+        std::cout << "next size: " << next.size() << "\n";
+        
+        for (int i=0; i<next.size(); ++i){
+            std::cout << "idx: " << next[i] << "\n";
+        }
+        */
 
         for (int i=1, j=0; i<=m; ++i){
             while (j>0 && haystack[i] != needle[j+1]){
@@ -118,7 +126,9 @@ public:
 /*
 int main(){
     Solution sol;
-    string haystack = "aaabbab", needle="ab";
+    // string haystack = "aaabbab", needle="ab";
+    string haystack = "aabbababbabbbabaaabbaabbabababbbaaaaaaababbabaababaabbbbaaabbbabb", needle="abbabbbabaa";
+    std::cout << "res: " << needle.size() << "\n";
     int res = sol.strStr(haystack, needle);
     std::cout << "res: " << res << "\n";
 }

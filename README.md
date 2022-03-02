@@ -33,3 +33,4 @@ LeetCode exercises by Python
 | --- | --- | --- | --- |
 | 5 | longest palindromic substring | [python](https://github.com/wshuail/leetcode/blob/master/python/5.longest-palindromic-substring.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/5.longest-palindromic-substring.cpp)| |
 | 14 | longest common prefix | [python](https://github.com/wshuail/leetcode/blob/master/python/14.longest-common-prefix.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/14.longest-common-prefix.cpp)| |
+| 28 | strStr | [python](https://github.com/wshuail/leetcode/blob/master/python/28.implement-strstr.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/28.implement-strstr.cpp)| KMP |

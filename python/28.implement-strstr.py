@@ -36,14 +36,58 @@
 # 
 #
 class Solution:
+
+    def build_next(self, needle):
+        print ('needle 2: {}, length: {}'.format(needle, len(needle)))
+        j = 0
+        _next = [0]*len(needle)
+        for i in range(2, len(needle)):
+            if (j>0 and needle[i] != needle[j+1]):
+                j = _next[j]
+            if needle[i] == needle[j+1]:
+                j += 1
+            _next[i] = j
+        return _next
+
     def strStr(self, haystack: str, needle: str) -> int:
         if haystack[0: len(needle)] == needle:
             return 0
         
         haystack_len = len(haystack)
         needle_len = len(needle)
+        """
+        # method 1
         for i in range(haystack_len-needle_len+1):
             if haystack[i: i+needle_len] == needle:
                 return i
         return -1
+        """
+        haystack = " " + haystack
+        needle = " " + needle
+        _next = self.build_next(needle)
+        # print ('next: ', _next)
+        j = 0
+        for i in range(1, haystack_len+1):
+            # print ('i: {}, j: {}, haystack[i]: {}, needle[j+1]: {}'.format(i ,j, haystack[i], needle[j+1]))
+            while (j>0 and haystack[i] != needle[j+1]):
+                j = _next[j]
+            if haystack[i] == needle[j+1]:
+                j += 1
+            if j == needle_len:
+                return i-needle_len
+        return -1
+
+"""
+sol = Solution()
+# haystack = "aabba"
+# needle = "bba"
+haystack = "ababaabbbbababbaabaaabaabbaaaabbabaabbbbbbabbaabbabbbabbbbbaaabaababbbaabbbabbbaabbbbaaabbababbabbbabaaabbaabbabababbbaaaaaaababbabaababaabbbbaaabbbabb"
+haystack = haystack[92-6: ]
+needle = "abbabbbabaa"
+print ('haystack: {}, needle: {}'.format(haystack, needle))
+idx = sol.strStr(haystack, needle)
+print (idx)
+"""
+
+
 
