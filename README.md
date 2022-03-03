@@ -34,3 +34,12 @@ LeetCode exercises by Python
 | 5 | longest palindromic substring | [python](https://github.com/wshuail/leetcode/blob/master/python/5.longest-palindromic-substring.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/5.longest-palindromic-substring.cpp)| |
 | 14 | longest common prefix | [python](https://github.com/wshuail/leetcode/blob/master/python/14.longest-common-prefix.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/14.longest-common-prefix.cpp)| |
 | 28 | strStr | [python](https://github.com/wshuail/leetcode/blob/master/python/28.implement-strstr.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/28.implement-strstr.cpp)| KMP |
+
+## Two Pointer
+| Index | Title | Solution | Idea |
+| --- | --- | --- | --- |
+| 344 | reverse string | [python](https://github.com/wshuail/leetcode/blob/master/python/344.reverse-string.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/344.reverse-string.cpp)| |
+| 561 | array partition i | [python](https://github.com/wshuail/leetcode/blob/master/python/561.array-partition-i.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/561.array-partition-i.cpp)| |
+| 167 | two sum ii input array is sorted | [python](https://github.com/wshuail/leetcode/blob/master/python/167.two-sum-ii-input-array-is-sorted.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/167.two-sum-ii-input-array-is-sorted.cpp)| |
+| 27 | remove element | [python](https://github.com/wshuail/leetcode/blob/master/python/27.remove-element.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/27.remove-element.cpp)| |
+| 485 | max consecutive ones | [python](https://github.com/wshuail/leetcode/blob/master/python/485.max-consecutive-ones.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/485.max-consecutive-ones.cpp)| |

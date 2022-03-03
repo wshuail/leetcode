@@ -36,12 +36,22 @@
 from typing import List
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        """
         nums = ''.join([str(num) for num in nums]).split('0')
         num_len = [len(num) for num in nums if num != '']
         if num_len:
             return max(num_len)
         else:
             return 0
+        """
+        max_len, tmp = 0, 0
+        for i in range(len(nums)):
+            if nums[i] == 1:
+                tmp += 1
+            else:
+                tmp = 0
+            max_len = max(max_len, tmp)
+        return max_len
 
 """
 nums = [1,1,0,1,1,1]

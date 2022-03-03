@@ -62,6 +62,7 @@
 #
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+        """
         if len(nums) == 0:
             return 0
         pointer = len(nums)-1
@@ -70,5 +71,12 @@ class Solution:
                 nums[i], nums[pointer] = nums[pointer], nums[i]
                 pointer -= 1
         return pointer+1
+        """
+        slow = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[slow] = nums[i]
+                slow += 1
+        return slow
 
 

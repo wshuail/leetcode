@@ -54,5 +54,27 @@ class Solution:
         nums.sort()
         res = 0
         for i in range(0, len(nums), 2):
-            res += min(nums[i: i+1])
+            res += nums[i]
         return res
+        """
+        min_num, max_num = min(nums), max(nums)
+        # min_num, max_num = -10**4, 10**4
+        count = dict().fromkeys(range(min_num, max_num+2), 0)
+        for num in nums:
+            count[num] += 1
+        
+        res = 0
+        num = min_num
+        while num <= max_num:
+            count_num = count[num]
+            if count_num == -1:
+                count[num+1] -= 1
+            else:
+                if count_num%2 == 0:
+                    res += count_num//2*num
+                if count_num%2 == 1:
+                    res += (count_num//2+1)*num
+                    count[num+1] -= 1
+            num += 1
+        return res
+        """

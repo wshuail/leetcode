@@ -55,10 +55,20 @@
 #
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        """
         d = {}
         for i, num in enumerate(numbers):
             if target-num in d:
                 return [d[target-num], i+1]
             else:
                 d[num] = i+1
+        """
+        left, right = 0, len(numbers)-1
+        while left < right:
+            if numbers[left] + numbers[right] == target:
+                return left+1, right+1
+            if numbers[left] + numbers[right] > target:
+                right -= 1
+            else:
+                left += 1
 
