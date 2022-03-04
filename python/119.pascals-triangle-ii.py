@@ -32,6 +32,7 @@ from typing import List
 
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
+        """
         res = []
         for i in range(rowIndex+1):
             row = [None for _ in range(i+1)]
@@ -41,6 +42,16 @@ class Solution:
             res.append(row)
 
         return res[rowIndex]
+        """
+        rowIndex += 1
+        res = [1]*rowIndex
+        if rowIndex <= 2:
+            return res
+        for i in range(rowIndex):
+            for j in reversed(range(1, i)):
+                res[j] = res[j] + res[j-1]
+        return res
+
 
 # sol = Solution()
 # print (sol.getRow(5))

@@ -32,4 +32,16 @@
 #
 class Solution:
     def reverseWords(self, s: str) -> str:
-        return ' '.join([word[::-1] for word in s.split(' ')])
+        # return ' '.join([word[::-1] for word in s.split(' ')])
+        left = -1
+        res = ''
+        for i in range(len(s)):
+            if left < 0 and s[i] != ' ':
+                left = i
+            if left >= 0 and s[i] == ' ' and i != len(s)-1:
+                res += s[left: i][::-1]
+                res += ' '
+                left = -1
+            if left >= 0 and i == len(s)-1:
+                res += s[left: i+1][::-1]
+        return res

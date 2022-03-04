@@ -1,6 +1,6 @@
 # LeetCode
 
-LeetCode exercises by Python
+LeetCode exercises by Python and C++
 
 ## Tree
 | Index | Title | Solution | Idea |
@@ -20,6 +20,9 @@ LeetCode exercises by Python
 | 724 | find pivot index | [python](https://github.com/wshuail/leetcode/blob/master/python/724.find-pivot-index.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/724.find-pivot-index.cpp)| |
 | 35 | search insert position | [python](https://github.com/wshuail/leetcode/blob/master/python/35.search-insert-position.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/35.search-insert-position.cpp)| |
 | 56 | merge intervals | [python](https://github.com/wshuail/leetcode/blob/master/python/56.merge-intervals.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/56.merge-intervals.cpp)| |
+| 118 | pascals triangle | [python](https://github.com/wshuail/leetcode/blob/master/python/118.pascals-triangle.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/118.pascals-triangle.cpp)| |
+| 119 | pascals triangle ii | [python](https://github.com/wshuail/leetcode/blob/master/python/119.pascals-triangle-ii.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/119.pascals-triangle-ii.cpp)| |
+| 209 | minimum size subarray sum | [python](https://github.com/wshuail/leetcode/blob/master/python/209.minimum-size-subarray-sum.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/209.minimum-size-subarray-sum.cpp)| |
 
 ### 2D Array
 | Index | Title | Solution | Idea |
@@ -34,6 +37,7 @@ LeetCode exercises by Python
 | 5 | longest palindromic substring | [python](https://github.com/wshuail/leetcode/blob/master/python/5.longest-palindromic-substring.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/5.longest-palindromic-substring.cpp)| |
 | 14 | longest common prefix | [python](https://github.com/wshuail/leetcode/blob/master/python/14.longest-common-prefix.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/14.longest-common-prefix.cpp)| |
 | 28 | strStr | [python](https://github.com/wshuail/leetcode/blob/master/python/28.implement-strstr.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/28.implement-strstr.cpp)| KMP |
+| 557 | reverse words in a string iii | [python](https://github.com/wshuail/leetcode/blob/master/python/557.reverse-words-in-a-string-iii.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/557.reverse-words-in-a-string-iii.cpp)| |
 
 ## Two Pointer
 | Index | Title | Solution | Idea |
