@@ -45,3 +45,10 @@ class Solution:
             if left >= 0 and i == len(s)-1:
                 res += s[left: i+1][::-1]
         return res
+
+
+if __name__ == '__main__':
+    sol = Solution();
+    s = 'I love u'
+    res = sol.reverseWords(s)
+    print (res)
