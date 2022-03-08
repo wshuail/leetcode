@@ -60,7 +60,7 @@ class Solution:
         if len(nums) == 0:
             return 0
         pointer = 0
-        for i in range(len(nums)):
+        for i in range(1, len(nums)):
             if nums[i] != nums[pointer]:
                 # nums[i], nums[pointer+1] = nums[pointer+1], nums[i]
                 nums[pointer+1] = nums[i]

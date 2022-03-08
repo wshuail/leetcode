@@ -62,18 +62,26 @@
 # 
 # 
 #
+from typing import List
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         # return min(nums)
         left, right = 0, len(nums)-1
-        while left <= right:
-            if nums[left] <= nums[right]:
-                return nums[left]
+        while left < right:
             mid = left + (right-left)//2
-
-            if nums[left] <= nums[mid]:
+            if nums[mid] > nums[right]:
                 left = mid+1
             else:
                 right = mid
+        return nums[left]
+
+
+if __name__ == '__main__':
+    sol = Solution()
+    nums = [4,5,6,7,0,1,2]
+    print (nums)
+    res = sol.findMin(nums)
+    print (res)
 
 

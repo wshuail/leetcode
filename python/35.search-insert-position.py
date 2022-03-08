@@ -42,9 +42,23 @@
 #
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        """
         if nums == []:
             return 0
         for i, val in enumerate(nums):
             if val >= target:
                 return i
         return len(nums)
+        """
+        if nums[-1] < target:
+            return len(nums)
+        left = 0
+        right = len(nums)-1
+        while left < right:
+            mid = left + (right-left)//2
+            if nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid
+        return left
+

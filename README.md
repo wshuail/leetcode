@@ -47,3 +47,11 @@ LeetCode exercises by Python and C++
 | 167 | two sum ii input array is sorted | [python](https://github.com/wshuail/leetcode/blob/master/python/167.two-sum-ii-input-array-is-sorted.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/167.two-sum-ii-input-array-is-sorted.cpp)| |
 | 27 | remove element | [python](https://github.com/wshuail/leetcode/blob/master/python/27.remove-element.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/27.remove-element.cpp)| |
 | 485 | max consecutive ones | [python](https://github.com/wshuail/leetcode/blob/master/python/485.max-consecutive-ones.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/485.max-consecutive-ones.cpp)| |
+| 26 | remove duplicates from sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/26.remove-duplicates-from-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/26.remove-duplicates-from-sorted-array.cpp)| |
+| 283 | move zeros | [python](https://github.com/wshuail/leetcode/blob/master/python/283.move-zeroes.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/283.move-zeroes.cpp)| |
+
+Binary Search
+| Index | Title | Solution | Idea |
+| --- | --- | --- | --- |
+| 35 | search insert position | [python](https://github.com/wshuail/leetcode/blob/master/python/35.search-insert-position.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/35.search-insert-position.cpp)| |
+| 153 | find minimum in rotated sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/153.find-minimum-in-rotated-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/153.find-minimum-in-rotated-sorted-array.cpp)| |
