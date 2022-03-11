@@ -40,6 +40,7 @@ class Solution:
         if root is None:
             return 0
         
+        """
         max_depth = 1
         nodes = [root]
         
@@ -54,4 +55,9 @@ class Solution:
             if len(nodes) > 0:
                 max_depth += 1
         return max_depth
+        """
+
+        left_depth = self.maxDepth(root.left)
+        right_depth = self.maxDepth(root.right)
+        return max(left_depth, right_depth) + 1
 

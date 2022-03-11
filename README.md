@@ -5,12 +5,14 @@ LeetCode exercises by Python and C++
 ## Tree
 | Index | Title | Solution | Idea |
 | --- | --- | --- | --- |
-| 144 | preorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/144.binary-tree-preorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/python/144.binary-tree-preorder-traversal.cpp)| |
-| 94 | inorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/94.binary-tree-inorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/python/94.binary-tree-inorder-traversal.cpp)| |
-| 145 | postorder traversal | [python]https://github.com/wshuail/leetcode/blob/master/python/145.binary-tree-postorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/python/145.binary-tree-postorder-traversal.cpp)|
-| 102 | level order traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/102.binary-tree-level-order-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/python/102.binary-tree-level-order-traversal.cpp)|
-| 107 | level order traversal 2 | [python](https://github.com/wshuail/leetcode/blob/master/python/107.binary-tree-level-order-traversal-ii.py) | 
-
+| 144 | preorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/144.binary-tree-preorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/144.binary-tree-preorder-traversal.cpp)| |
+| 94 | inorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/94.binary-tree-inorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/94.binary-tree-inorder-traversal.cpp)| |
+| 145 | postorder traversal | [python]https://github.com/wshuail/leetcode/blob/master/python/145.binary-tree-postorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/145.binary-tree-postorder-traversal.cpp)| |
+| 102 | level order traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/102.binary-tree-level-order-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/102.binary-tree-level-order-traversal.cpp)| |
+| 107 | level order traversal 2 | [python](https://github.com/wshuail/leetcode/blob/master/python/107.binary-tree-level-order-traversal-ii.py) ||
+| 104 | maximum depth of binary tree | [python](https://github.com/wshuail/leetcode/blob/master/python/104.maximum-depth-of-binary-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/104.maximum-depth-of-binary-tree.cpp) | TopToBottom <br> BottomToTop <br> BFS <br> DFS |
+| 101 | symmetric tree | [python](https://github.com/wshuail/leetcode/blob/master/python/101.symmetric-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/101.symmetric-tree.cpp) | |
+| 112 | path sum | [python](https://github.com/wshuail/leetcode/blob/master/python/112.path-sum.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/112.path-sum.cpp) | |
 
 ## Array
 
