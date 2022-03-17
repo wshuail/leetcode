@@ -52,3 +52,22 @@
 #         self.right = right
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+        self.hash_table = {num: i for i, num in enumerate(inorder)}
+        return self.helper(preorder, inorder, 0, len(preorder)-1, 0, len(inorder)-1)
+
+    def helper(self, preorder, inorder, l_start, l_end, r_start, r_end):
+        if r_start > r_end:
+            return None
+        root = TreeNode()
+        root.val = preorder[l_start]
+        if l_start == l_end:
+            return root
+
+        mid_idx = self.hash_table[preorder[l_start]]
+        root.left = self.helper(preorder, inorder, l_start+1, l_start+1+mid_idx-1-r_start, r_start, mid_idx-1)
+        root.right = self.helper(preorder, inorder, l_start+1+mid_idx-r_start, l_end, mid_idx+1, r_end)
+
+        return root
+
+
+
