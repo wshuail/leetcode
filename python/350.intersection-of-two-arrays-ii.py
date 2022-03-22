@@ -47,6 +47,7 @@
 from typing import List
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        """
         d1, d2, d = dict(), dict(), dict()
         for num in nums1:
             if num in d1:
@@ -66,6 +67,24 @@ class Solution:
         for k, v in d.items():
             res += [k for _ in range(v)]
         return res
+        """
+
+        nums1.sort()
+        nums2.sort()
+        i, j = 0, 0
+        res = []
+        while i<len(nums1) and j<len(nums2):
+            if nums1[i] == nums2[j]:
+                res.append(nums1[i])
+                i += 1
+                j += 1
+            else:
+                if nums1[i] > nums2[j]:
+                    j += 1
+                else:
+                    i += 1
+        return res
+
 
 """
 nums1 = [4,9,5]

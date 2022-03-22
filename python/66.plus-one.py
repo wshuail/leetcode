@@ -54,6 +54,7 @@
 #
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
+        """
         adder = 1
         for i in reversed(range(len(digits))):
             target = digits[i] + adder
@@ -65,5 +66,14 @@ class Solution:
         if adder == 1:
             digits = [1] + digits
         return digits
+        """
+        for i in reversed(range(len(digits))):
+            if digits[i] != 9:
+                digits[i] += 1
+                return digits
+            else:
+                digits[i] = 0
+        return [1] + [0 for _ in range(len(digits))]
+
 
 

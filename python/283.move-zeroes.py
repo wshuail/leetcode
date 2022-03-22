@@ -32,6 +32,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+
+        """
+        # method 1
         idx = -1
         for i in range(len(nums)):
             if idx < 0 and nums[i] == 0:
@@ -39,6 +42,37 @@ class Solution:
             if idx >= 0 and nums[i] != 0:
                 nums[idx], nums[i] = nums[i], nums[idx]
                 idx += 1
+        """
+
+        """
+        # method 2
+        idx = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[idx], nums[i] = nums[i], nums[idx]
+                idx += 1
+        for i in range(idx, len(nums)):
+            nums[i] = 0
+        """
+
+        """
+        # method 3
+        zero_count = 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                zero_count += 1
+            elif zero_count > 0:
+                nums[i-zero_count] = nums[i]
+                nums[i] = 0
+        """
+
+        # method 4
+        slow, fast = 0, 0
+        while fast < len(nums):
+            if nums[fast] != 0:
+                nums[fast], nums[slow] = nums[slow], nums[fast]
+                slow += 1
+            fast += 1
 
 
 """

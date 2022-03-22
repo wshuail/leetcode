@@ -68,3 +68,4 @@ class Solution:
         """
         k = k%len(nums)
         nums[:] = nums[-k:] + nums[:-k]
+        # nums[:] = nums[::-1][0: k][::-1] + nums[::-1][k: ][::-1]
