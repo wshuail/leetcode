@@ -30,5 +30,13 @@
 #
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        s = [l for l in s.lower() if l in 'abcdefghijklmnopqrstuvwxyz1234567890']
-        return s==s[::-1]
+        # s = [l for l in s.lower() if l in 'abcdefghijklmnopqrstuvwxyz1234567890']
+        # return s==s[::-1]
+        s = [l for l in s.lower() if l.isalpha() or l.isdigit()]
+        left, right = 0, len(s)-1
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
