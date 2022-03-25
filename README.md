@@ -13,6 +13,16 @@ LeetCode exercises by Python and C++
 | 104 | maximum depth of binary tree | [python](https://github.com/wshuail/leetcode/blob/master/python/104.maximum-depth-of-binary-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/104.maximum-depth-of-binary-tree.cpp) | TopToBottom <br> BottomToTop <br> BFS <br> DFS |
 | 101 | symmetric tree | [python](https://github.com/wshuail/leetcode/blob/master/python/101.symmetric-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/101.symmetric-tree.cpp) | |
 | 112 | path sum | [python](https://github.com/wshuail/leetcode/blob/master/python/112.path-sum.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/112.path-sum.cpp) | |
+| 98 | validate binary search tree | [python](https://github.com/wshuail/leetcode/blob/master/python/98.validate-binary-search-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/98.validate-binary-search-tree.cpp) | |
+| 108 | convert sorted array to binary search tree | [python](https://github.com/wshuail/leetcode/blob/master/python/108.convert-sorted-array-to-binary-search-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/108.convert-sorted-array-to-binary-search-tree.cpp) | |
+| 226 | invert binary tree | [python](https://github.com/wshuail/leetcode/blob/master/python/226.invert-binary-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/226.invert-binary-tree.cpp) | |
+| 105 | construct binary tree from preorder and inorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/105.construct-binary-tree-from-preorder-and-inorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/105.construct-binary-tree-from-preorder-and-inorder-traversal.cpp) | |
+| 106 | construct binary tree from inorder and postorder traversal | [python](https://github.com/wshuail/leetcode/blob/master/python/python/106.construct-binary-tree-from-inorder-and-postorder-traversal.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/python/106.construct-binary-tree-from-inorder-and-postorder-traversal.cpp) | |
+| 116 | populating next right pointers in each node | [python](https://github.com/wshuail/leetcode/blob/master/python/116.populating-next-right-pointers-in-each-node.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/116.populating-next-right-pointers-in-each-node.cpp) | |
+| 117 | populating next right pointers in each node ii | [python](https://github.com/wshuail/leetcode/blob/master/python/117.populating-next-right-pointers-in-each-node-ii.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/117.populating-next-right-pointers-in-each-node-ii.cpp) | |
+| 297 | serialize and deserialize binary tree | [python](https://github.com/wshuail/leetcode/blob/master/python/297.serialize-and-deserialize-binary-tree.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/297.serialize-and-deserialize-binary-tree.cpp) | |
+
+
 
 ## Array
 
@@ -31,6 +41,7 @@ LeetCode exercises by Python and C++
 | --- | --- | --- | --- |
 | 48 | rotate image | [python](https://github.com/wshuail/leetcode/blob/master/python/48.rotate-image.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/48.rotate-image.cpp)| flip diagonally then horizontally |
 | 73 | set matrix zeroes | [python](https://github.com/wshuail/leetcode/blob/master/python/73.set-matrix-zeroes.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/73.set-matrix-zeroes.cpp)| remember position smart |
+| 88 | merge sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/88.merge-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/88.merge-sorted-array.cpp)| remember position smart |
 | 498 | diagonal traverse | [python](https://github.com/wshuail/leetcode/blob/master/python/498.diagonal-traverse.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/498.diagonal-traverse.cpp)| |
 
 ## String
@@ -52,8 +63,9 @@ LeetCode exercises by Python and C++
 | 26 | remove duplicates from sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/26.remove-duplicates-from-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/26.remove-duplicates-from-sorted-array.cpp)| |
 | 283 | move zeros | [python](https://github.com/wshuail/leetcode/blob/master/python/283.move-zeroes.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/283.move-zeroes.cpp)| |
 
-Binary Search
+## Binary Search
 | Index | Title | Solution | Idea |
 | --- | --- | --- | --- |
 | 35 | search insert position | [python](https://github.com/wshuail/leetcode/blob/master/python/35.search-insert-position.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/35.search-insert-position.cpp)| |
 | 153 | find minimum in rotated sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/153.find-minimum-in-rotated-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/153.find-minimum-in-rotated-sorted-array.cpp)| |
+| 278 | first bad version | [python](https://github.com/wshuail/leetcode/blob/master/python/278.first-bad-version.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/278.first-bad-version.cpp)| |

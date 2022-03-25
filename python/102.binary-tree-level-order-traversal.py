@@ -48,9 +48,9 @@ class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if root is None:
             return []
-
-        queue = [root]
         res = []
+        """
+        queue = [root]
 
         while queue:
             level_res = []
@@ -65,6 +65,19 @@ class Solution:
             queue = next_level_queue
 
         return res
+        """
+
+        self.helper(res, root, depth=0)
+        return res
+
+    def helper(self, res, root, depth):
+        if root is None:
+            return 
+        if depth >= len(res):
+            res.append([])
+        res[depth].append(root.val)
+        self.helper(res, root.left, depth+1)
+        self.helper(res, root.right, depth+1)
 
 
 

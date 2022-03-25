@@ -51,7 +51,7 @@
 
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
-
+        """
         def is_mirror(left, right):
             if not left and not right:
                 return True
@@ -66,6 +66,25 @@ class Solution:
             return True
 
         return is_mirror(root.left, root.right)
+        """
+        if root is None:
+            return True
+        queue = [root.left, root.right]
+        while queue:
+            left = queue.pop(0)
+            right = queue.pop(0)
+            if left is None and right is None:
+                continue
+            if left is None or right is None:
+                return False
+            if left.val != right.val:
+                return False
+            queue.append(left.left)
+            queue.append(right.right)
+            queue.append(left.right)
+            queue.append(right.left)
+        return True
+
 
 
 
