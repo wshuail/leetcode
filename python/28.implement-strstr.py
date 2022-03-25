@@ -36,13 +36,45 @@
 # 
 #
 class Solution:
+    def _build_next(self, needle):
+        _next = [0]*len(needle)
+        _next[0] = -1
+        i, j = 0, -1
+        while i < len(needle)-1:
+            if j == -1 or needle[i]==needle[j]:
+                i += 1
+                j += 1
+                _next[i] = j
+            else:
+                j = _next[j]
+        return _next
+    
+    def strStr(self, haystack: str, needle: str) -> int:
+        if haystack[0: len(needle)] == needle:
+            return 0
 
+        _next = self._build_next(needle)
+
+        i, j = 0, 0
+        while i < len(haystack) and j < len(needle):
+            if j == -1 or haystack[i] == needle[j]:
+                i += 1
+                j += 1
+            else:
+                j = _next[j]
+
+            if j == len(needle):
+                return i-j
+        
+        return -1
+
+
+    """
     def build_next(self, needle):
-        print ('needle 2: {}, length: {}'.format(needle, len(needle)))
         j = 0
         _next = [0]*len(needle)
         for i in range(2, len(needle)):
-            if (j>0 and needle[i] != needle[j+1]):
+            while (j>0 and needle[i] != needle[j+1]):
                 j = _next[j]
             if needle[i] == needle[j+1]:
                 j += 1
@@ -55,20 +87,11 @@ class Solution:
         
         haystack_len = len(haystack)
         needle_len = len(needle)
-        """
-        # method 1
-        for i in range(haystack_len-needle_len+1):
-            if haystack[i: i+needle_len] == needle:
-                return i
-        return -1
-        """
         haystack = " " + haystack
         needle = " " + needle
         _next = self.build_next(needle)
-        # print ('next: ', _next)
         j = 0
         for i in range(1, haystack_len+1):
-            # print ('i: {}, j: {}, haystack[i]: {}, needle[j+1]: {}'.format(i ,j, haystack[i], needle[j+1]))
             while (j>0 and haystack[i] != needle[j+1]):
                 j = _next[j]
             if haystack[i] == needle[j+1]:
@@ -76,6 +99,22 @@ class Solution:
             if j == needle_len:
                 return i-needle_len
         return -1
+    """
+    
+    """
+    def strStr(self, haystack: str, needle: str) -> int:
+        # method 1
+        for i in range(haystack_len-needle_len+1):
+            if haystack[i: i+needle_len] == needle:
+                return i
+        return -1
+    """
+
+
+
+
+
+
 
 """
 sol = Solution()
