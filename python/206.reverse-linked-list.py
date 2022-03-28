@@ -29,10 +29,23 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
+        """
+        # method 1
         if head is None or head.next is None:
             return head
         node = self.reverseList(head.next)
         head.next.next = head
         head.next = None
         return node
+        """
+
+        dummy = None
+        while head:
+            tmp = head.next
+            head.next = dummy
+            dummy = head
+            head = tmp
+
+        return dummy
+
 
