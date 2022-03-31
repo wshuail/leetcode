@@ -69,3 +69,14 @@ LeetCode exercises by Python and C++
 | 35 | search insert position | [python](https://github.com/wshuail/leetcode/blob/master/python/35.search-insert-position.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/35.search-insert-position.cpp)| |
 | 153 | find minimum in rotated sorted array | [python](https://github.com/wshuail/leetcode/blob/master/python/153.find-minimum-in-rotated-sorted-array.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/153.find-minimum-in-rotated-sorted-array.cpp)| |
 | 278 | first bad version | [python](https://github.com/wshuail/leetcode/blob/master/python/278.first-bad-version.py) <br> [C++](https://github.com/wshuail/leetcode/blob/master/cpp/278.first-bad-version.cpp)| |
+
+
+## Linked List
+| Index | Title | Solution | Idea |
+| --- | --- | --- | --- |
+| 19 | remove nth node from end of list | [python](https://github.com/wshuail/leetcode/blob/master/python/19.remove-nth-node-from-end-of-list.py) <br>| |
+| 21 | merge two sorted lists | [python](https://github.com/wshuail/leetcode/blob/master/python/21.merge-two-sorted-lists.py) <br> | |
+| 141 | linked list cycle | [python](https://github.com/wshuail/leetcode/blob/master/python/141.linked-list-cycle.py) <br>| |
+| 206 | reverse linked list | [python](https://github.com/wshuail/leetcode/blob/master/python/206.reverse-linked-list.py) <br>| |
+| 234 | palindrome linked list | [python](https://github.com/wshuail/leetcode/blob/master/python/234.palindrome-linked-list.py) <br>| |
+| 237 | delete node in a linked list | [python](https://github.com/wshuail/leetcode/blob/master/python/237.delete-node-in-a-linked-list.py) <br>| |
