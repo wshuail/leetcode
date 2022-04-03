@@ -38,6 +38,8 @@
 #
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        """
+        # method 1
         left, right = 0, 0
         max_len = 0
         memo = {}
@@ -50,4 +52,27 @@ class Solution:
             right += 1
         max_len = max(max_len, right-left)
         return max_len
+        """
+
+        left, right = 0, 0
+        max_len, cur_len = 0, 0
+        sub_s = []
+        for right in range(len(s)):
+            cur_len += 1
+            if s[right] in sub_s:
+                while s[right] in sub_s:
+                    sub_s.remove(s[left])
+                    left += 1
+                    cur_len -= 1
+            sub_s.append(s[right])
+            max_len = max(max_len, cur_len)
+        return max_len
+
+
+
+
+
+
+
+
 
