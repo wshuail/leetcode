@@ -43,6 +43,7 @@
 #         self.right = right
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+        """
         if root is None:
             return []
 
@@ -64,4 +65,26 @@ class Solution:
         res = [r[::pointer] for r, pointer in zip(res, pointers)]
 
         return res
+        """
 
+
+        if root is None:
+            return []
+        res = []
+        q = deque([root])
+        even = 1
+
+        while q:
+            level = []
+            for _ in range(len(q)):
+                node = q.popleft()
+                if node is not None:
+                    level.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            res.append(level[::even])
+            even *= -1
+        
+        return res
