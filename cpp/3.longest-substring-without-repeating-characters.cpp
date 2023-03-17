@@ -1,117 +1,65 @@
-/*
- * @lc app=leetcode.cn id=3 lang=cpp
- *
- * [3] 无重复字符的最长子串
- *
- * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
- *
- * algorithms
- * Medium (38.13%)
- * Total Accepted:    1.6M
- * Total Submissions: 4.2M
- * Testcase Example:  '"abcabcbb"'
- *
- * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
- * 
- * 
- * 
- * 示例 1:
- * 
- * 
- * 输入: s = "abcabcbb"
- * 输出: 3 
- * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
- * 
- * 
- * 示例 2:
- * 
- * 
- * 输入: s = "bbbbb"
- * 输出: 1
- * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
- * 
- * 
- * 示例 3:
- * 
- * 
- * 输入: s = "pwwkew"
- * 输出: 3
- * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
- * 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
- * 
- * 
- * 
- * 
- * 提示：
- * 
- * 
- * 0 <= s.length <= 5 * 10^4
- * s 由英文字母、数字、符号和空格组成
- * 
- * 
- */
-#include <unordered_map>
-#include <string>
+//  Name: Luke Wang
+//  Email: oopswangsl@gmail.com
+//  Date: 2023-03-16
+
+
+
+//  Given a string s, find the length of the longest substring without repeating characters.
+//   
+//  Example 1:
+//  
+//  Input: s = "abcabcbb"
+//  Output: 3
+//  Explanation: The answer is "abc", with the length of 3.
+//  
+//  Example 2:
+//  
+//  Input: s = "bbbbb"
+//  Output: 1
+//  Explanation: The answer is "b", with the length of 1.
+//  
+//  Example 3:
+//  
+//  Input: s = "pwwkew"
+//  Output: 3
+//  Explanation: The answer is "wke", with the length of 3.
+//  Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+//  
+//   
+//  Constraints:
+//  
+//  0 <= s.length <= 5 * 104
+//  s consists of English letters, digits, symbols and spaces.
+//  
+
 #include <iostream>
-using namespace std;
 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        /*
-        //s[start,end) 前面包含 后面不包含
-        unordered_map<char, int> hash;
-        int left = 0;
-        int right = 0;
-        int length = 0;
-        int result = 0;
-        while (right < int(s.size()))
-        {
-            char ch = s[right];
-            //仅当s[start,end) 中存在s[end]时更新start
-            if (hash.find(ch) != hash.end() && hash[ch] >= left)
-            {
-                left = hash[ch] + 1;
-                length = right - left;
-            }
-            hash[ch] = right;
+        int left = 0, right = 1;
+        int max_len = 0, cur_len = 0;
+        unordered_set<char> sub_s;
 
-            right++;
-            length++;
-            result = max(result, length);
+        for (right=0; right<s.length(); right++){
+            cur_len++;
+            if (sub_s.count(s[right])){
+                while (sub_s.count(s[right])){
+                    sub_s.erase(s[left]);
+                    left++;
+                    cur_len--;
+                }    
+            }
+            sub_s.insert(s[right]);
+            max_len = max(cur_len, max_len);
         }
-        return result;
-        */
-        unordered_map<char, int> hash;
-        int left = 0;
-        int right = 0;
-        int length = 0;
-        int result = 0;
-        while (right < int(s.size())){
-            char ch = s[right];
-            if (hash.find(ch) != hash.end() && hash[ch] >= left){
-                left = hash[ch] + 1;
-                length = right - left;
-                }
-            
-            hash[ch] = right;
-            
-            right++;
-            length++;
-            result = max(result, length);
-        }
-        return result;
+
+        return max_len;
+        
     }
 };
 
-/*
-int main(){
-    Solution sol;
-    string s = "pwwkew";
-    int res = sol.lengthOfLongestSubstring(s);
-    std::cout << "res: " << res << '\n' << std::endl;
-}
-*/
+
 
 
 
