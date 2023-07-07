@@ -59,14 +59,35 @@
 # 
 # 
 #
+
+from typing import List
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         left = 0
         min_len = 10**5+1
-        for right in range(len(nums)+1):
-            if sum(nums[left: right]) >= target:
-                while sum(nums[left: right]) >= target:
-                    if right-left < min_len:
-                        min_len = right - left
-                    left += 1
+        sum_ = 0
+        for right in range(len(nums)):
+            sum_ += nums[right]
+            while sum_ >= target:
+                sum_ -= nums[left]
+                if right-left+1 < min_len:
+                    min_len = right - left + 1
+                left += 1
         return min_len if min_len < 10**5+1 else 0
+
+
+if __name__ == '__main__':
+    sol = Solution()
+    # target = 7
+    # nums = [2,3,1,2,4,3]
+    target = 11
+    nums = [1,1,1,1,1,1,1,1]
+    print(sol.minSubArrayLen(target, nums))
+
+
+
+
+
+
+
+
